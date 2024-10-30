@@ -1,27 +1,65 @@
-# UfalLoginAngular
+# 🎨 Releitura Login UFAL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+<p align="center">
+  <img src="https://img.shields.io/badge/Node-v20.8.0-green" alt="Node version" />
+  <img src="https://img.shields.io/badge/Angular-v18.0.0-red" alt="Angular version" />
+</p>
 
-## Development server
+## 📜 Sobre o Projeto
+Este projeto é uma releitura da tela de login do sistema da Universidade Federal de Alagoas (UFAL), desenvolvido com Angular. O objetivo é criar uma interface moderna e funcional que remeta ao layout original, utilizando boas práticas de desenvolvimento front-end utilizando a documentação do Angular como material de estudo e consulta, para avaliar sua completude diante dos aspectos de abrangência, organização, clareza, atualização, suporte, exemplos e tutoriais.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🛠 Tecnologias Utilizadas
+- **Angular**: Framework principal para construção do front-end.
+- **Node v20.8.0**: Versão recomendada para o ambiente de desenvolvimento.
+- **CSS**: Para estilização da interface.
+- **HTML**: Estrutura das páginas.
+- **Figma**: Para a prototipação [Acessar o protótipo](https://www.figma.com/design/I1R0zT5RMBgenDhWbl67iT/Untitled?node-id=5-2&t=88uwmLIWK1I3tha6-1)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🚀 Como Rodar o Projeto
+1. **Clone o Repositório**:
+   ```bash
+   git clone https://github.com/JuniorVinicius/ufal-login-angular.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Instale as Dependências:
+	```bash
+	cd nome-do-projeto
+	npm install
 
-## Running unit tests
+3. **Inicie o Servidor de Desenvolvimento:
+	```bash
+	ng serve
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧩 Requisitos Funcionais
 
-## Running end-to-end tests
+- **RF001 - Credenciais**  
+  O sistema deve permitir que o usuário insira um CPF e uma senha.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **RF002 - Validação de Campos**  
+  O sistema deve validar os campos de CPF e senha, garantindo que não estejam vazios antes de permitir a submissão do formulário.
 
-## Further help
+- **RF003 - Autenticação do Usuário**  
+  O sistema deve verificar se o CPF e senha correspondem a um usuário cadastrado.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **RF004 - Mensagens de Erro**  
+  - O sistema deve exibir uma mensagem de erro "CPF ou senha incorretos" se as credenciais fornecidas forem inválidas.
+  - O sistema deve exibir uma mensagem de erro "Campo obrigatório" se qualquer campo obrigatório não for preenchido.
+
+- **RF005 - Redirecionamento Pós-Login**  
+  O sistema deve redirecionar o usuário para a página inicial após um login bem-sucedido.
+
+- **RF006 - Feedback ao Usuário**  
+  O sistema deve fornecer feedback visual ao usuário sobre o status da tentativa de login, como mensagens de carregamento e sucesso ou erro na autenticação.
+
+## 📸 Screenshots
+
+| Tela de Login                     | Tela de Inicial (Boas Vindas)                 |
+|-----------------------------------|-------------------------------------|
+| ![Tela de Login](public/auth.png) | ![Tela de Confirmação](public/welcome.png) |
+
+
+## 📝 Notas
+> Este projeto é um exercício de releitura e não está vinculado oficialmente ao sistema da UFAL.
