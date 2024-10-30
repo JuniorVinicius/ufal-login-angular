@@ -48,11 +48,11 @@ export class AuthComponent {
       return;
     }
     if (hasCpfError) {
-      this.cpfErrorMessage = 'CPF é obrigatório';
+      this.cpfErrorMessage = 'Campo obrigatório';
     }
 
     if (hasPasswordError) {
-      this.passwordErrorMessage = 'Senha é obrigatória';
+      this.passwordErrorMessage = 'Campo obrigatório';
     }
 
     if (
