@@ -63,8 +63,6 @@ export class AuthComponent {
     ) {
       // Simulate an successful authentication
       localStorage.setItem('token', 'any_token');
-      console.log('Login');
-
       this.router.navigate(['welcome']);
       return;
     } else if (!hasPasswordError && !hasCpfError) {
