@@ -1,7 +1,7 @@
 <main class="main-container">
   <section class="container">
     <div class="bar"></div>
-    <form class="form">
+    <form class="form" [formGroup]="authForm" (ngSubmit)="handleSubmit()">
       <div class="logo-container">
         <img
           class="logo"
@@ -11,27 +11,50 @@
       </div>
       <h1 class="title">Central de Autenticação</h1>
 
-      <label for="cpf" class="label">
-        CPF
-        <div class="input-container">
-          <img class="icon" src="/icon/person.svg" alt="Ícone de Pessoa Física" />
-          <input class="input" type="text" id="cpf" name="cpf" placeholder="" />
-        </div>
-      </label>
-      <label for="password" class="label">
-        Senha
-        <div class="input-container">
-          <img class="icon" src="/icon/lock.svg" alt="Ícone de Cadeado" />
-          <input
-            class="input"
-            type="password"
-            id="password"
-            name="password"
-            placeholder=""
-          />
-        </div>
-      </label>
-
+      <div class="input-main-container">
+        <label for="cpf" class="label">
+          CPF
+          <div class="input-container">
+            <img
+              class="icon"
+              src="/icon/person.svg"
+              alt="Ícone de Pessoa Física"
+            />
+            <input
+              class="input"
+              type="text"
+              id="cpf"
+              name="cpf"
+              placeholder=""
+              formControlName="cpf"
+              (ngModelChange)="onChangeCPF($event)"
+            />
+          </div>
+        </label>
+        @if (cpfErrorMessage !== '') {
+        <p class="error">{{ cpfErrorMessage }}</p>
+        }
+      </div>
+      <div class="input-main-container">
+        <label for="password" class="label">
+          Senha
+          <div class="input-container">
+            <img class="icon" src="/icon/lock.svg" alt="Ícone de Cadeado" />
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              placeholder=""
+              formControlName="password"
+              (ngModelChange)="onChangePassword()"
+            />
+          </div>
+        </label>
+        @if (passwordErrorMessage !== '') {
+        <p class="error">{{ passwordErrorMessage }}</p>
+        }
+      </div>
       <button class="button">Entrar</button>
 
       <a href="#" class="link">Esqueceu a senha?</a>

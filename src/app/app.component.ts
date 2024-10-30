@@ -6,9 +6,9 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AuthComponent, WelcomeComponent],
-  template: `<welcome-page></welcome-page>`,
+  imports: [RouterOutlet,AuthComponent,WelcomeComponent],
+  template: `<router-outlet></router-outlet>`,
 })
 export class AppComponent {
-  title = '';
+  title = 'Autenticação';
 }
