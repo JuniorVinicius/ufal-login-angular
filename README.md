@@ -58,7 +58,7 @@ Este projeto é uma releitura da tela de login do sistema da Universidade Federa
 
 | Tela de Login                     | Tela de Inicial (Boas Vindas)                 |
 |-----------------------------------|-------------------------------------|
-| ![Tela de Login](public/auth.png) | ![Tela de Confirmação](public/welcome.png) |
+| ![Tela de Login](public/screenshots/auth.png) | ![Tela de Confirmação](public/screenshots/welcome.png) |
 
 
 ## 📝 Notas
